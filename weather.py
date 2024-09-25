@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 import os
 import csv
 
-# Paso 1: Configurar los argumentos CLI
+# Configurar los argumentos CLI
 parser = argparse.ArgumentParser(description='Este es un script para solicitar el clima de una ubicación.')
 parser.add_argument('ciudad', help='Agregue la ubicación que desee.')
 parser.add_argument('formato', help='Elija el formato de salida: json, texto o csv.')
@@ -17,7 +17,6 @@ args = parser.parse_args()
 ciudad = args.ciudad  # Ciudad desde CLI
 formato = args.formato.lower()  # Formato de salida (convertido a minúsculas)
 guardar = args.guardar  #para guardar en archivo
-
 # Cargar la API_KEY desde .env
 load_dotenv()
 Api_key = os.getenv('API_KEY')
@@ -32,7 +31,7 @@ url = f"{base}q={ciudad}&appid={Api_key}&units=metric"
 def obtener_clima(url):
     try:
         respuesta = requests.get(url,)
-        respuesta.raise_for_status()  # Lanza error si no se recibe código 2xx
+        respuesta.raise_for_status()  # Lanza error si no se recibe código 200
         return respuesta.json()
     except HTTPError as http_err:
         print(f"Error HTTP: {http_err}")
