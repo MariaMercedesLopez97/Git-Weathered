@@ -22,6 +22,9 @@ pip install -r requirements.txt
 echo "ejecutando el cli..."
 python weather.py asuncion json
 
+opcional
+python weather.py asuncion json --guardar
+
 
 # bash script.sh 
 
