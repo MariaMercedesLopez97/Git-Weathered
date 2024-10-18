@@ -25,7 +25,7 @@ if not Api_key:
 
 
 base = "https://api.openweathermap.org/data/2.5/weather?"
-url = f"{base}q={ciudad}&appid={Api_key}&units=metric"
+url = f"{base}q={ciudad}&appid={Api_key}&units=metric&lang=es"
 
 # Función para obtener los datos de clima
 def obtener_clima(url):
