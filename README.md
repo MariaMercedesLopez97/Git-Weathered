@@ -3,7 +3,7 @@ Proyecto de Consulta de Clima CLI
 Este es un script en Python para consultar el clima de una ubicación específica utilizando la API de OpenWeatherMap. El script acepta la ciudad como argumento y te permite seleccionar el formato de salida (JSON, texto o CSV). Además, puedes optar por guardar los resultados en un archivo.
 
 Requisitos
-
+ 
 - Python 3.x
 - Una cuenta de [OpenWeatherMap](https://openweathermap.org/) para obtener la clave de API.
 - Un archivo `.env` con la clave de API configurada:
